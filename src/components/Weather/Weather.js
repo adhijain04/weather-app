@@ -5,7 +5,7 @@ import './Weather.css';
      return(
             <div className='info'>
                 <div className='temp'>
-                    {props.temperature && <h1>{props.temperature}</h1>}
+                    {props.temperature && <h1>{props.temperature} &deg;c</h1> }
                     {props.city && props.country && <p>{props.city}, {props.country}</p>}
                 </div>
                 <div className='desc'>
