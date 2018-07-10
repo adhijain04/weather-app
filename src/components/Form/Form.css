@@ -1,0 +1,27 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items : flex-start;
+    /* height: 85vh; */
+    /* width: 100%; */
+    padding-top: 100px;
+}
+
+button{
+    background-color: #f16051;
+    color: white;
+}
+
+input[type=text]{
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px #f16051;
+    width: 30%;
+    padding-bottom: 5px;
+    color: #fff !important;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    /* margin-bottom: 30px; */
+    margin-right: 20px;
+    font-size: 20px;
+}
