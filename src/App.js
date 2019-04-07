@@ -22,26 +22,26 @@ class App extends Component {
   }
 
 
-  getWeather = async (e) =>{
+  getWeather = async (e) => {
     e.preventDefault();
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     const API_CALL = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`);
-     const data = await API_CALL.json();
-     console.log(data);
+    const data = await API_CALL.json();
+    console.log(data);
 
 
-     if(city && country){
+    if (city && country) {
       this.setState({
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
-        temperature: data.main.temp ,
+        temperature: data.main.temp,
         description: data.weather[0].description,
         wind: data.wind.speed,
         error: " "
       });
-    }else{
+    } else {
       this.setState({
         city: undefined,
         country: undefined,
@@ -50,7 +50,7 @@ class App extends Component {
         description: undefined,
         wind: undefined,
         error: "Please enter the Location."
-      });        
+      });
     }
   }
 
@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className='container mt-5'>
-          <div className="row">
+          <div className="row row-container">
             <div className="col-lg-4 col-sm-3 left">
               <Title />
               <Weather
@@ -73,8 +73,8 @@ class App extends Component {
                 humidity={this.state.humidity}
                 description={this.state.description}
                 wind={this.state.wind}
-                error={this.state.error}                
-                />
+                error={this.state.error}
+              />
             </div>
           </div>
         </div>

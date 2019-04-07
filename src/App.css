@@ -25,3 +25,8 @@ body{
   height: 85vh;
   /* justify-content: center; */
 }
+
+.row-container{
+  display: flex !important;
+  flex-direction: row !important
+}
